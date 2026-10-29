@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Collection fixture</title>
+    <style>
+      body {
+        background: #e6d8b8;
+        font: 18px Georgia;
+        padding: 50px;
+      }
+      button {
+        background: linear-gradient(45deg, #cc764f, #426447);
+        padding: 20px;
+        color: white;
+        border-radius: 30%;
+        box-shadow: 0 5px 20px #3338;
+      }
+      h1 {
+        font: 700 46px Georgia;
+        letter-spacing: 2px;
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #cc764f;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      input {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Perhaps a little wonder</h1>
+    <p>This public example contains perhaps.</p>
+    <button onclick="document.body.dataset.clicked = 'yes'">
+      Original action</button
+    ><input value="PRIVATE_SENTINEL" />
+    <div contenteditable>PRIVATE_EDITABLE_SENTINEL</div>
+    <div class="spinner"></div>
+    <div id="shadow"></div>
+    <script>
+      document
+        .querySelector("#shadow")
+        .attachShadow({ mode: "open" }).innerHTML =
+        '<div style="width:100px;height:100px;background:#abcdef;border-radius:20px">shadow example</div>';
+    </script>
+  </body>
+</html>

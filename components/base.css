@@ -1,0 +1,114 @@
+:root {
+  --paper: #f6f2e9;
+  --ink: #292d26;
+  --green: #426447;
+  --orange: #bf6338;
+  --line: #d8d2c2;
+  color: var(--ink);
+  background: var(--paper);
+  font:
+    14px/1.4 Arial,
+    sans-serif;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, #fff8e333, transparent 60%),
+    var(--paper);
+}
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+button,
+.fileButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #faf7ef;
+  border: 1px solid #bdbdaf;
+  border-radius: 5px;
+  padding: 11px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+button:hover {
+  background: #e9e7d9;
+}
+button:active {
+  transform: translateY(1px);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+input,
+select {
+  border: 1px solid #c5c5b5;
+  border-radius: 4px;
+  background: #fbf8f0;
+  padding: 10px 12px;
+  min-width: 0;
+}
+input[type="checkbox"] {
+  accent-color: var(--green);
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex-shrink: 0;
+}
+input[type="range"] {
+  accent-color: var(--green);
+  padding: 0;
+}
+a {
+  color: var(--green);
+}
+a svg {
+  vertical-align: middle;
+}
+progress {
+  width: 100%;
+  height: 9px;
+  accent-color: #7c8d68;
+  border: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+progress::-webkit-progress-bar {
+  background: #dddccf;
+}
+progress::-webkit-progress-value {
+  background: #82916e;
+}
+:focus-visible {
+  outline: 3px solid #b77940;
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+::selection {
+  background: #d9dfc7;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

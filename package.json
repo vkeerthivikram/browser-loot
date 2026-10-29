@@ -1,0 +1,40 @@
+{
+  "name": "browser-loot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build --mv3",
+    "build:firefox": "wxt build -b firefox --mv3",
+    "zip": "wxt zip --mv3 && wxt zip -b firefox --mv3",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm test && npm run build && npm run build:firefox",
+    "postinstall": "wxt prepare",
+    "format": "prettier --write components lib entrypoints tests *.ts *.json"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "idb": "^8.0.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "fake-indexeddb": "^6.2.6",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "typescript": "^5.7.0",
+    "vitest": "^5.0.5",
+    "web-ext": "^10.8.0",
+    "wxt": "0.21.5",
+    "@wxt-dev/module-react": "1.2.2"
+  }
+}
